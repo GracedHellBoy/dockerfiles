@@ -41,7 +41,7 @@ RUN cd /opt/AppServer/tomcat/bin && chmod +x *.sh
 # Map to /opt/tomcat/webapps --> this is where you deploy .war file on your local server 
 VOLUME /opt/AppServer/tomcat/webapps
 
-# Map to /var/log/tomcat --> tomcat logs on your local servers
+# Map to /var/log/tomcat --> tomcat logs on your local server
 VOLUME /opt/AppServer/tomcat/logs
 
 EXPOSE 8080
