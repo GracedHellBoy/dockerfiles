@@ -23,7 +23,8 @@
 
 5- running the docker container:
 
-	docker run --name App_Name -p 192.168.10.77:8080:8080 \
+	docker -d run --name App_Name -p 192.168.10.77:8080:8080 \
 	-v /opt/tomcat/webapps:/opt/AppServer/tomcat/webapps \
 	-v /var/logs/tomcat:/opt/AppServer/tomcat/logs \
+	--restart=always \
 	registry.example-domain.com:5000/tomcat:v8.5.6
