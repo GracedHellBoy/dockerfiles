@@ -18,3 +18,10 @@
 	mkdir -p /opt/tomcat/webapps --> this is where you deploy .war files 
 
 	mkdir -p /var/log/tomcat --> will allow you to manage the logs locally on your server
+
+5- running the docker container:
+
+	docker run --name App_Name -p 192.168.10.77:8080:8080 \
+	-v /opt/tomcat/webapps:/opt/AppServer/tomcat/webapps \
+	-v /var/logs/tomcat:/opt/AppServer/tomcat/logs \
+	registry.example-domain.com:5000/tomcat:v8.5.6
