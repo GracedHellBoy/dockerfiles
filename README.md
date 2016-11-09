@@ -11,7 +11,7 @@
 
 	docker build -t registry.example-domain.com:5000/tomcat:v8.5.6 tomcat8/
 
-3- fter you build the docker image you need to push it to your own private registry
+3- after you build the docker image you need to push it to your own private registry
 
 	docker push registry.example-domain.com:5000/tomcat:v8.5.6
 
