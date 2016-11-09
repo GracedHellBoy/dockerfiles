@@ -31,7 +31,7 @@ WORKDIR /opt/AppServer
 RUN wget $TOMCAT_TARBALL_URL
 
 RUN tar -xvf apache-tomcat-8.5.6.tar.gz && mv apache-tomcat-8.5.6 tomcat && rm -f apache-tomcat-8.5.6.tar.gz \
-&& rm -fr /opt/AppServer/tomcat/webapps/examples 
+&& rm -fr $CATALINA_HOME/webapps/examples 
 
 # Change tomcat env variables
 COPY setenv.sh /opt/AppServer/tomcat/bin/setenv.sh
