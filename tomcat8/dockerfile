@@ -8,7 +8,7 @@ FROM docker.io/ubuntu:18.04
 
 MAINTAINER Ahmed Choukri  "ahmedchoukri@gmail.com"
 
-LABEL description="Apache Tomcat v8.5.23 with Oracle JDK 8"
+LABEL description="Apache Tomcat v8.5.31 with Oracle JDK 8"
 
 ENV TOMCAT_TARBALL_URL http://www.goodbrains.ca/downloads/apache-tomcat-8.5.31.tar.gz
 
