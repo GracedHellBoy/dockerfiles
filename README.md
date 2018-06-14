@@ -22,5 +22,29 @@
 	docker -d run --name App_Name -p 8080:8080 registry.example-domain.com:5000/app:ver
 	
 	
+	
+# Notes: #
+
+1- ckeck version:
+
+	docker exec App_Name /opt/AppServer/tomcat/bin/version.sh
+	
+	Server version: Apache Tomcat/8.5.31
+	Server built:   Apr 27 2018 20:24:25 UTC
+	Server number:  8.5.31.0
+	OS Name:        Linux
+	OS Version:     4.9.87-linuxkit-aufs
+	Architecture:   amd64
+	JVM Version:    1.8.0_171-b11
+	JVM Vendor:     Oracle Corporation
+	
+2- check process:
+
+	docker exec WebAppX ps aux |grep java 
+	
+	root         1  0.5 10.7 4617684 219400 ?      Ssl  16:26   0:14 /usr/lib/jvm/java-8-oracle/bin/java -	Djava.util.logging.config.file=/opt/AppServer/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms1024M -Xmx1024M -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/AppServer/tomcat/bin/bootstrap.jar:/opt/AppServer/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/AppServer/tomcat -Dcatalina.home=/opt/AppServer/tomcat -Djava.io.tmpdir=/opt/AppServer/tomcat/temp org.apache.catalina.startup.Bootstrap start
+
+	
+	
 
 	
